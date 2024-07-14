@@ -1354,5 +1354,33 @@ var pysOptions = {"staticEvents":[],"dynamicEvents":[],"triggerEvents":[],"trigg
 var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselWrapperAriaLabel":"Carrossel | Rolagem horizontal: Setas para esquerda e direita","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.22.3","is_static":false,"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_optimized_control_loading":true,"e_onboarding":true,"home_screen":true,"ai-layout":true,"e_lazyload":true},"urls":{"assets":"https:\/\/wp.dupoc.click\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":12,"title":"Dupoc%20-%20Bet%2C%20Plataforma%2C%20Games%2C%20Cassino%20%7C%20Login%20-%20Cadastro","excerpt":"","featuredImage":"https:\/\/wp.dupoc.click\/wp-content\/uploads\/2024\/07\/img44.png"}};
 </script>
 <script src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.22.3" id="elementor-frontend-js"></script>
+
+	<script>
+  // Função para redirecionar
+  function redirectToNewPage() {
+    window.location.href = '/cadastro'; // Substitua pela URL desejada
+  }
+
+  // Função para exibir a mensagem de redirecionamento
+  function showMessage() {
+    var messageElement = document.getElementById('redirectMessage');
+    messageElement.style.display = 'block';
+  }
+
+  // Evento de scroll
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+    var documentHeight = document.documentElement.scrollHeight;
+
+    // Se o usuário rolar mais de 50% da página
+    if (scrollPosition > (documentHeight - windowHeight) * 0.5) {
+      showMessage(); // Mostra a mensagem de redirecionamento
+      setTimeout(redirectToNewPage, 3000); // Redireciona após 3 segundos
+    }
+  });
+</script>
+
+	
 	</body>
 </html>

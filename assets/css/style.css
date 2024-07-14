@@ -35,7 +35,7 @@ body{
     left: 0;
     position: absolute;
     right: 0;
-    bottom: 250px;
+    bottom: 150px;
 }
 .progress-bar-container-land, .progress-bar-container-land-pc, .progress-bar-container-port {
     background-color: initial;

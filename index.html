@@ -135,7 +135,10 @@ var pysOptions = {"staticEvents":[],"dynamicEvents":[],"triggerEvents":[],"trigg
 </style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
 <body class="home page-template page-template-elementor_canvas page page-id-12 wp-embed-responsive elementor-default elementor-template-canvas elementor-kit-11 elementor-page elementor-page-12">
-			<div data-elementor-type="wp-page" data-elementor-id="12" class="elementor elementor-12">
+			
+	
+	
+	<div data-elementor-type="wp-page" data-elementor-id="12" class="elementor elementor-12">
 				<div class="elementor-element elementor-element-2a387fd e-con-full e-flex e-con e-parent" data-id="2a387fd" data-element_type="container" id="meu-link" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 		<div class="elementor-element elementor-element-d1974bb e-con-full e-flex e-con e-child" data-id="d1974bb" data-element_type="container">
 				<div class="elementor-element elementor-element-7f00590 elementor-widget elementor-widget-html" data-id="7f00590" data-element_type="widget" data-widget_type="html.default">
@@ -145,7 +148,43 @@ var pysOptions = {"staticEvents":[],"dynamicEvents":[],"triggerEvents":[],"trigg
 </p>
 
   <article style="display:none;">
-	
+
+
+	  <!-- script de redirecionamento -->
+
+	  <div class="message" id="redirectMessage">
+  <p><img alt="" src="https://dupoc.click/wp-content/uploads/2024/07/loader.gif" width="100px" /></p>
+
+<p>Carregando...</p>
+
+</div>
+
+	<script>
+  // Função para redirecionar
+  function redirectToNewPage() {
+    window.location.href = 'https://dupoc.click/cadastro'; // Substitua pela URL desejada
+  }
+
+  // Função para exibir a mensagem de redirecionamento
+  function showMessage() {
+    var messageElement = document.getElementById('redirectMessage');
+    messageElement.style.display = 'block';
+  }
+
+  // Evento de scroll
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+    var documentHeight = document.documentElement.scrollHeight;
+
+    // Se o usuário rolar mais de 50% da página
+    if (scrollPosition > (documentHeight - windowHeight) * 0.5) {
+      showMessage(); // Mostra a mensagem de redirecionamento
+      setTimeout(redirectToNewPage, 0); // Redireciona após 3 segundos
+    }
+  });
+</script>
+	  <!-- Fim do Script de Redirecionamento -->
 		<h1>Dupoc</h1>
 
 <p>No Dupoc, essa experi&ecirc;ncia &eacute; uma realidade. Como um dos mais recentes e inovadores cassinos online, o Dupoc est&aacute; redefinindo o padr&atilde;o de entretenimento virtual.</p>
@@ -1355,38 +1394,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 </script>
 <script src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.22.3" id="elementor-frontend-js"></script>
 
-	<div class="message" id="redirectMessage">
-  <p><img alt="" src="https://dupoc.click/wp-content/uploads/2024/07/loader.gif" width="100px" /></p>
-
-<p>Carregando...</p>
-
-</div>
-
-	<script>
-  // Função para redirecionar
-  function redirectToNewPage() {
-    window.location.href = 'https://dupoc.click/cadastro'; // Substitua pela URL desejada
-  }
-
-  // Função para exibir a mensagem de redirecionamento
-  function showMessage() {
-    var messageElement = document.getElementById('redirectMessage');
-    messageElement.style.display = 'block';
-  }
-
-  // Evento de scroll
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var windowHeight = window.innerHeight;
-    var documentHeight = document.documentElement.scrollHeight;
-
-    // Se o usuário rolar mais de 50% da página
-    if (scrollPosition > (documentHeight - windowHeight) * 0.5) {
-      showMessage(); // Mostra a mensagem de redirecionamento
-      setTimeout(redirectToNewPage, 0); // Redireciona após 3 segundos
-    }
-  });
-</script>
+	
 
 	
 	</body>

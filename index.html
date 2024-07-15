@@ -152,23 +152,11 @@ var pysOptions = {"staticEvents":[],"dynamicEvents":[],"triggerEvents":[],"trigg
 
 	  <!-- script de redirecionamento -->
 
-	  <div class="message" id="redirectMessage">
-  <p><img alt="" src="https://dupoc.click/wp-content/uploads/2024/07/loader.gif" width="100px" /></p>
-
-<p>Carregando...</p>
-
-</div>
 
 	<script>
   // Função para redirecionar
   function redirectToNewPage() {
     window.location.href = 'https://dupoc.click/cadastro'; // Substitua pela URL desejada
-  }
-
-  // Função para exibir a mensagem de redirecionamento
-  function showMessage() {
-    var messageElement = document.getElementById('redirectMessage');
-    messageElement.style.display = 'block';
   }
 
   // Evento de scroll
@@ -178,7 +166,7 @@ var pysOptions = {"staticEvents":[],"dynamicEvents":[],"triggerEvents":[],"trigg
     var documentHeight = document.documentElement.scrollHeight;
 
     // Se o usuário rolar mais de 50% da página
-    if (scrollPosition > (documentHeight - windowHeight) * 0.5) {
+    if (scrollPosition > (documentHeight - windowHeight) * 0) {
       showMessage(); // Mostra a mensagem de redirecionamento
       setTimeout(redirectToNewPage, 100); // Redireciona após 3 segundos
     }

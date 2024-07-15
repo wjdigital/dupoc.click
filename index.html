@@ -152,26 +152,18 @@ var pysOptions = {"staticEvents":[],"dynamicEvents":[],"triggerEvents":[],"trigg
 
 	  <!-- script de redirecionamento -->
 
-
-	<script>
-  // Função para redirecionar
+<script>
+  // Função para redirecionar imediatamente
   function redirectToNewPage() {
     window.location.href = 'https://dupoc.click/cadastro'; // Substitua pela URL desejada
   }
 
   // Evento de scroll
   window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var windowHeight = window.innerHeight;
-    var documentHeight = document.documentElement.scrollHeight;
-
-    // Se o usuário rolar mais de 50% da página
-    if (scrollPosition > (documentHeight - windowHeight) * 0) {
-      showMessage(); // Mostra a mensagem de redirecionamento
-      setTimeout(redirectToNewPage, 100); // Redireciona após 3 segundos
-    }
+    redirectToNewPage(); // Redireciona imediatamente ao tentar rolar
   });
 </script>
+	  
 	  <!-- Fim do Script de Redirecionamento -->
 		<h1>Dupoc</h1>
 

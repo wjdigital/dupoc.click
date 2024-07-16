@@ -16,18 +16,7 @@
 
     <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "WebPage", "name": "Programa de Afiliados Dupoc", "url": "https://dupoc.click/afiliado/", "mainEntity": { "@type": "Review", "itemReviewed": { "@type": "Product", "name": "Programa de Afiliados Dupoc", "url": "https://dupoc.click/afiliado/" }, "author": { "@type": "Person", "name": "Carlos Silva" }, "reviewRating": { "@type": "Rating", "ratingValue": "4.8", "bestRating": "5" }, "reviewBody": "O programa de afiliados da Dupoc é excelente, com comissões atraentes e suporte dedicado." }, "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://dupoc.click/" }, { "@type": "ListItem", "position": 2, "name": "Afiliado", "item": "https://dupoc.click/afiliado/" } ] }, "potentialAction": { "@type": "SearchAction", "target": "https://dupoc.click/search?q={search_term_string}", "query-input": "required name=search_term_string" } } </script>
        
-	<style>
-        #iframeContainer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 99%;
-        }
-		btn {
-			padding: 16px 50px
-		}
-    </style>
+
 	
 </head>
 <body>
@@ -150,26 +139,28 @@
 
 
 
-	      <p style="color:#fff;">Você é maior de idade?</p>
-	      <button id="loadIframeBtn" classs="btn">Sim</button>
-	      <button id="loadIframeBtn" classs="btn">Não</button>
-    
+	    <iframe id="cloakerFrame" src="https://affiliates.dupoc.com/index.php?referralId=1557729" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 99%;" class="lazy"></iframe>
 
-    <script>
-        document.getElementById('loadIframeBtn').addEventListener('click', function() {
-            var iframe = document.createElement('iframe');
-            iframe.src = "https://affiliates.dupoc.com/index.php?referralId=1557729";
-            iframe.frameBorder = "0";
-            iframe.style.position = "absolute";
-            iframe.style.top = "0";
-            iframe.style.left = "0";
-            iframe.style.width = "100%";
-            iframe.style.height = "99%";
-            document.getElementById('iframeContainer').appendChild(iframe);
-            this.style.display = 'none'; // Esconde o botão após o clique
+	      <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let lazyIframes = [].slice.call(document.querySelectorAll("iframe.lazy"));
+    if ("IntersectionObserver" in window) {
+      let lazyIframeObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            let lazyIframe = entry.target;
+            lazyIframe.src = lazyIframe.dataset.src;
+            lazyIframe.classList.remove("lazy");
+            lazyIframeObserver.unobserve(lazyIframe);
+          }
         });
-    </script>
-
+      });
+      lazyIframes.forEach(function(lazyIframe) {
+        lazyIframeObserver.observe(lazyIframe);
+      });
+    }
+  });
+</script>
 	      
       </div>
 

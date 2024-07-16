@@ -139,28 +139,8 @@
 
 
 
-	    <iframe title="Informações" id="cloakerFrame" src="https://affiliates.dupoc.com/index.php?referralId=1557729" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 99%;" class="lazy"></iframe>
+	    <iframe title="Informações" id="cloakerFrame" src="https://affiliates.dupoc.com/index.php?referralId=1557729" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 99%;" ></iframe>
 
-	      <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let lazyIframes = [].slice.call(document.querySelectorAll("iframe.lazy"));
-    if ("IntersectionObserver" in window) {
-      let lazyIframeObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            let lazyIframe = entry.target;
-            lazyIframe.src = lazyIframe.dataset.src;
-            lazyIframe.classList.remove("lazy");
-            lazyIframeObserver.unobserve(lazyIframe);
-          }
-        });
-      });
-      lazyIframes.forEach(function(lazyIframe) {
-        lazyIframeObserver.observe(lazyIframe);
-      });
-    }
-  });
-</script>
 	      
       </div>
 
